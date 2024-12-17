@@ -23009,6 +23009,17 @@ let data = [
     },
   },
 ];
+
 //1 print each card where the series set is "HeartGold & SoulSilver"
+const series = data.filter(
+  (card) => card.set.series == "HeartGold & SoulSilver"
+);
+console.log(series);
 
 //2 print each card name where the card type "includes" Fire
+
+const fireCard = data
+  .filter((card) => card.types.includes("Fire"))
+  .forEach((card) => console.log("Fire pokemon", card.name));
+
+
